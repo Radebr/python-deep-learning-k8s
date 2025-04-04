@@ -1,0 +1,68 @@
+{%extends "layout.html"%}
+{% block content%}
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فقرة مع عناوين وصورة</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+        h1, h2 {
+            margin-top: 0;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .text-content {
+            flex: 1;
+        }
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+  <div class="col mb-5 py-5">
+    <div class="row px-5">
+        <div class="col-lg-12 mb-5 d-flex align-items-center justify-content-center">
+            <form  enctype="multipart/form-data">
+              <div class="card bg-dark text-light">
+                <div class="card-body text-center">
+                  <label  class="card-img w-1 h-1">
+                    <img id="pwd_preview23" src="{{ url_for('static', filename='drone.jpg') }}" style="height:273px; width:500px">
+                  </label>
+                </div>
+              </div>
+            </from> 
+        </div>
+
+        <h2 style="color: hsl(209, 63%, 55%);" class="text-center">رؤيتنا لمستقبل المشروع</h2>
+                  
+<p class="text-center">
+  تتطلع رؤيتنا المستقبلية إلى دمج نموذجنا الذكي للكشف عن الأعشاب الضارة مع تقنيات الطائرات بدون طيار (الدرونات).<br>
+  تخيل أسرابًا من الدرونات الذكية تحلق فوق الحقول الزراعية، مزودة بنظامنا الذي يرصد بدقة الأعشاب الضارة بين المحاصيل.<br>
+  ستقوم هذه الدرونات برش مبيدات الأعشاب بطريقة مستهدفة، مما يقلل من استخدام المواد الكيميائية ويضمن حماية المحاصيل بشكل فعال.
+</p>
+
+  
+
+        <div class="col-lg-12 mt-5 d-flex align-items-center justify-content-center">
+          <form  enctype="multipart/form-data">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <label  class="card-img w-1 h-1">
+                  <img id="pwd_preview23" src="{{ url_for('static', filename='drone1.jpg') }}" style="height:281px; width:500px">
+                </label>
+              </div>
+            </div>
+          </from> 
+      </div>
+
+</body>
+</html>
+{% endblock content %}

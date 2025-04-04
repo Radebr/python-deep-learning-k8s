@@ -1,0 +1,102 @@
+{%extends "layout.html"%}
+{% block content%}
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فقرة مع عناوين وصورة</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+        h1, h2 {
+            margin-top: 0;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .text-content {
+            flex: 1;
+        }
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container p-5">
+        <div class="text-content">
+            <h1 style="color: #fc5039;">Cynodon dactylon (L.) Pers. (نـجــم)</h1>
+            <h2 style="color: #fc5039;">العائلة النجيلية Poaceae</h2>
+            <p>
+                النجم من النباتات المعروفة، وهو ضار جدا إذا طغي على الأراضي الزراعية، ويمتلك هذا النبات جذامير معمرة تزحف تحت الأرض وتخرج منها السيقان الهوائية، الأوراق
+                شريطية صغيرة طولها لا يتعدى 4 سم، أما السنابل فتخرج من قمة الساق وهي تأخذ شكلا مميزا، فهي طويلة وتتفرع من نقطة واحدة
+            </p>
+            <h2 style="color: #1da73b;">النمو والإزهار : </h2>
+            <p>
+                نبات معمر ينمو طوال العام، أما سنابله فتظهر في الربيع والصيف.
+            </p>
+            <h2 style="color: #1da73b;">أماكن التواجد : </h2>
+            <p>
+                يفضل الأماكن الرطبة كثيرة الماء، مثل المزارع وأماكن صعود المياه.
+            </p>
+            <h2 style="color: #1da73b;">الإنتشار الجغرافي : </h2>
+            <p>
+                نبات عالمي الإنتشار Cosmopolites فهو ينمو في معظم بقاع العالم.
+            </p>
+            <h2 style="color: #1da73b;">ملاحظات : </h2>
+            <p>
+              ⦿ على حسب التحاليل الكيميائية فإن النجم يحتوي على بروتينات بسيطة، سكريات، بعض القلويدات، والعناصر المعدنية مثل الفسفور وأكسيد المغنزيوم والكلسيوم والصوديوم والبوتاسيوم. 
+                <br>⦿ لوحظ أن القلويدات المستخلصة من هذا النبات تعمل على تخفيض جريان الدم، لذلك فهو يستعمل في حالات الرعاف والخروج المستمر لدم الطمث والبواسير حيث تستعمل الجذاميرعلى شكل مستحلب (مغلى). 
+                <br>⦿ المستخلص الكحولي للنجم يمتلك نشاط مضاد للفيروسات. 
+                <br>⦿ النجم نبات مسهل ومنقي للدم ومدر للصفراء، كما أنه يستعمل ضد إصابات المسالك البولية والحصى البولية والمرارة ونقص اليوريا والتهاب المفاصل هذا بالإضافة إلى دوره الكبير في الوقاية من أمراض الكبد. 
+            </p>
+
+            <br>
+            
+            <h2 style="color: #fc5039;">رسم توضيحي للنـجــم</h2>
+            <h2 style="color: #fc5039;">Cynodon dactylon (L.) Pers.</h2>
+               
+             <h3 style="color: #1da73b;">(الشكل 1)</h3><p>سيقان النجم تنقسم إلى نوعان، سيقان عقيمة لا تحمل السنابل، وأخرى خصبة وأطول قليلا من السابقة.</p>
+             <h3 style="color: #1da73b;"><br>(الشكل 2)</h3><p>السنابل الطويلة تحمل على جانب واحد مجموعة من السنيبلات الموزعة على صفين.</p>
+             <h3 style="color: #1da73b;"><br>(الشكل 3)</h3><p>السنيبلات صغيرة ولا تتعدى 3 ملم، لونها بني في أغلب الأحيان.</p>
+             <h3 style="color: #1da73b;"><br>(الشكل 4)</h3><p>اللسين يتكون من مجموعة من الشعيرات.</p>
+        </p>
+    </div>
+    <div class="col mb-5 py-5">
+        <div class="row px-5">
+            <div class="col-lg-12 mb-5 d-flex align-items-center justify-content-center">
+                <form  enctype="multipart/form-data">
+                  <div class="card bg-dark text-light">
+                    <div class="card-body text-center">
+                      <label  class="card-img w-1 h-1">
+                        <img id="pwd_preview23" src="{{ url_for('static', filename='Cynodon_dactylon.jpg') }}" style="height:605px; width:512px">
+                      </label>
+                    </div>
+                  </div>
+                </from> 
+            </div>
+
+            <div class="col-lg-12 mt-5 d-flex align-items-center justify-content-center">
+                <form  enctype="multipart/form-data">
+                  <div class="card bg-dark text-light">
+                    <div class="card-body text-center">
+                      <label  class="card-img w-1 h-1">
+                        <img id="pwd_preview23" src="{{ url_for('static', filename='Cynodon.jpg') }}" style="height:704px; width:512px">
+                      </label>
+                    </div>
+                  </div>
+                </from> 
+            </div>
+
+        </div>
+    </div>
+    
+</div>
+
+</body>
+</html>
+{% endblock content %}

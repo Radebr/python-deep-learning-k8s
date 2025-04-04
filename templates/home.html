@@ -1,0 +1,49 @@
+{% extends "layout.html"%}
+{% block content%}
+<section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+    <div class="container text-end">
+        <div class="d-flex flex-column-reverse flex-sm-row align-items-center justify-content-between">
+          <img class="img-fluid" src="{{url_for('static', filename='4000x1300-topaz-enhance-1.5x-color4.png')}}" alt="" width="1000" height="325" style="margin: auto;">
+          </div>
+            <h2 class="mb-0 p-5">مشروع <span class="text-warning">تصنيف الصور | جامعة الشهيد حمه لخضر بالوادي - 2024</span><br><br>الهدف من مشروعنا هو تطوير نموذج ذكاء اصطناعي للتعرف على أنواع الأعشاب الضارة التي تؤثر على المحاصيل الفلاحية في ولاية وادي سوف بالجزائر، وذلك بهدف المساهمة في الحد من مخاطرها على الإنتاج الزراعي.
+            </h2>
+          </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-ligh">
+    <div class="container p-5">
+            <h2 class="text-center">يرجى إضافة صورة للكشف</h2>
+            <div class="col-lg-12 p-1 d-flex align-items-center justify-content-center">
+              <form action="/kashf" method="post" enctype="multipart/form-data">    
+            </div>
+        <div class="col-lg-12 p-1 d-flex align-items-center justify-content-center">
+        <form action="/kashf" method="post" enctype="multipart/form-data">
+          <div class="card bg-dark text-light">
+            <div class="card-body text-center">
+              <label for="pwd" class="card-img w-1 h-1">
+                <img id="pwd_preview" src="{{url_for('static', filename='hold.png')}}" style="height:512px; width:512px">
+                  <input hidden for="my_image" type="file" id="pwd" name="my_image" accept="image/jpeg" multiple>
+              </label>
+            </div>
+          </div>
+        </from> 
+        </div> 
+      <br>
+        <h2 class="text-center"><button value="Generate Prediction" class="btn btn-success"  style="font-size: 1.3rem; padding: 7px 35px;">كشف</button></h2>
+          <script>
+            document.getElementById('pwd').addEventListener('change', function() {
+              const [file] = this.files
+              if (file) {
+                document.getElementById('pwd_preview').src = URL.createObjectURL(file)
+              }
+            })
+          </script>
+
+    </div>
+</div>
+</form>
+</div>
+</section>
+{% endblock content%}

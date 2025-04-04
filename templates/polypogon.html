@@ -1,0 +1,103 @@
+{%extends "layout.html"%}
+{% block content%}
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فقرة مع عناوين وصورة</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            direction: rtl; /* Set text direction to right-to-left */
+        }
+        h1, h2 {
+            margin-top: 0;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .text-content {
+            flex: 1;
+        }
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container p-5">
+        <div class="text-content">
+            <h1 style="color: #fc5039;">Polypogon monspeliensis (L.) Desf. (ذيل الفار)</h1>
+            <h2 style="color: #fc5039;">العائلة النجيلية Poaceae</h2>
+            <p>
+                يسمى ذيل الفار نسبة إلى سنابله الناعمة التي تشبه الذيل، وهي نباتات نجيلية تنمو لعام واحد،
+                لها سيقان رقيقة قائمة تحمل أوراقا شريطية خضراء، السنابل كثيفة ناعمة صوفية المظهر وطول السنبلة الواحدة يصل إلى 15 سنتمترا.
+            </p>
+            <h2 style="color: #1da73b;">النمو والإزهار : </h2>
+            <p>
+                ينمو في الشتاء والربيع وهو يزدهر في الأماكن الرطبة، هذا وقد ينمو في الفصول الأخرى عندما تتوفر الظروف المناسبة.
+            </p>
+            <h2 style="color: #1da73b;">أماكن التواجد : </h2>
+            <p>
+                من النباتات التي تحتاج إلى بعض الرطوبة فهي لا تستطيع مقاومة الظروف الشديدة من الحرارة والجفاف، لذلك غالبا منا نجدها في الأماكن الرطبة كالحدائق المنزلية والمزارع.
+            </p>
+            <h2 style="color: #1da73b;">الإنتشار الجغرافي : </h2>
+            <p>
+                ينتشر في المناطق شبه المدارية.
+            </p>
+            <h2 style="color: #1da73b;">ملاحظات : </h2>
+            <p>
+              ⦿ بنمو كنبات ضار في الحدائق والمزارع مقاومته سهلة وغير مكلفة
+                <br>⦿ تأكله الحيوانات ويمكن الإستفادة منه عندما ينمو بكثرة.
+            </p>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            <h2 style="color: #fc5039;">رسم توضيحي لذيل الفار</h2>
+            <h2 style="color: #fc5039;">Polypogon monspeliensis (L.) Desf.</h2>
+               
+            
+            <h3 style="color: #1da73b;">(الشكل 1)</h3><p>نصل الأوراق أملس لا يحمل شعيرات.</p>
+            <h3 style="color: #1da73b;"><br>(الشكل 2)</h3><p>السنيبلات صغيرة والسفا ناعمة رقيقة.</p>
+        </p>
+    </div>
+    <div class="col mb-5 py-5">
+        <div class="row px-5">
+            <div class="col-lg-12 mb-5 d-flex align-items-center justify-content-center">
+                <form  enctype="multipart/form-data">
+                  <div class="card bg-dark text-light">
+                    <div class="card-body text-center">
+                      <label  class="card-img w-1 h-1">
+                        <img id="pwd_preview23" src="{{ url_for('static', filename='Polypogon_monspeliensis.jpg') }}" style="height:605px; width:512px">
+                      </label>
+                    </div>
+                  </div>
+                </from> 
+            </div>
+
+            <div class="col-lg-12 mt-5 d-flex align-items-center justify-content-center">
+                <form  enctype="multipart/form-data">
+                  <div class="card bg-dark text-light">
+                    <div class="card-body text-center">
+                      <label  class="card-img w-1 h-1">
+                        <img id="pwd_preview23" src="{{ url_for('static', filename='Polypogon.jpg') }}" style="height:704px; width:512px">
+                      </label>
+                    </div>
+                  </div>
+                </from> 
+            </div>
+
+        </div>
+    </div>
+    
+</div>
+
+</body>
+</html>
+{% endblock content %}

@@ -1,0 +1,63 @@
+{%extends "layout.html"%}
+{% block content%}
+
+<section class="bg-ligh">
+          {% if prediction %}
+          <div class="container p-5">
+            <div class="col-lg-12 p-1 d-flex align-items-center justify-content-center">
+              <form action="/kashf" method="post" enctype="multipart/form-data">    
+            </div>
+          <h2 class="text-center">النتيجة: {{ prediction }}</h2>
+          <h2 class="text-center">الدقة: %{{ score }}</h2>
+      <div class="col-lg-12 p-1 d-flex align-items-center justify-content-center">
+        <form action="/kashf" method="post" enctype="multipart/form-data">
+          <div class="card bg-dark text-light">
+            <div class="card-body text-center">
+              <label for="pwd" class="card-img w-1 h-1">
+                <img id="pwd_preview" src="{{ img_path }}" style="height:512px; width:512px">
+                <input hidden for="my_image" type="file" id="pwd" name="my_image" accept="image/jpeg" multiple>
+              </label>
+            </div>
+          </div>
+        </from>  
+      </div>  
+      <br><h2 class="text-center"><button value="Generate Prediction" class="btn btn-success"  style="font-size: 1.3rem; padding: 7px 35px;">كشف</button></h2>
+      <h2 class="text-center">لمزيد من المعلومات حول هذه العشبة يرجى الظغط <a href="/{{ prediction_english|lower }}">هنا</a></h2>
+          {% else %}
+          <div class="container p-5">
+            <h2 class="text-center">يرجى إضافة صورة للكشف</h2>
+            <div class="col-lg-12 p-1 d-flex align-items-center justify-content-center">
+              <form action="/kashf" method="post" enctype="multipart/form-data">    
+            </div>
+        <div class="col-lg-12 p-1 d-flex align-items-center justify-content-center">
+        <form action="/kashf" method="post" enctype="multipart/form-data">
+          <div class="card bg-dark text-light">
+            <div class="card-body text-center">
+              <label for="pwd" class="card-img w-1 h-1">
+                <img id="pwd_preview" src="{{url_for('static', filename='hold.png')}}" style="height:512px; width:512px">
+                  <input hidden for="my_image" type="file" id="pwd" name="my_image" accept="image/jpeg" multiple>
+              </label>
+            </div>
+          </div>
+        </from> 
+        </div> 
+      <br>
+        <h2 class="text-center"><button value="Generate Prediction" class="btn btn-success"  style="font-size: 1.3rem; padding: 7px 35px;">كشف</button></h2>
+        
+        
+          {% endif %}
+
+         
+            
+          
+          <script>
+            document.getElementById('pwd').addEventListener('change', function() {
+              const [file] = this.files
+              if (file) {
+                document.getElementById('pwd_preview').src = URL.createObjectURL(file)
+              }
+            })
+          </script>
+
+    </div>
+{% endblock content %}

@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myk8s-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-ai
+  template:
+    metadata:
+      labels:
+        app: my-ai
+    spec:
+      containers:
+      - name: my-ai
+        image: img_ai_kub
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myk8s-service
+spec:
+  type: NodePort
+  ports:
+    - port: 5000       
+      targetPort: 5000
+      nodePort: 30007
+  selector:
+    app: my-ai

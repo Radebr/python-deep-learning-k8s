@@ -1,0 +1,104 @@
+{%extends "layout.html"%}
+{% block content%}
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فقرة مع عناوين وصورة</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+        h1, h2 {
+            margin-top: 0;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .text-content {
+            flex: 1;
+        }
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container p-5">
+        <div class="text-content">
+            <h1 style="color: #fc5039;">Malva parviflora L. (خبيز)</h1>
+            <h2 style="color: #fc5039;">العائلة الخبازية Malvaceae</h2>
+            <p>
+                وأصله في العربية خباز، ورد في كتب اللغة أنه بقلة عريضة الورق لها ثمرة مستديرة واحدتها خبازة، يقول الشاعر :
+                <br>"وعاد خباز يسقيه الندى *** ذراوة تنسجه الهوج الدرج".<br>
+                والخبيز نبات عشبي حولي أو معمر، سيقانه تنمو زاحفة وهي أسطوانية خضراء اللون وتكسوها بعض الشعيرات، أوراق الخبيز شبه دائرية وحوافها متموجة وغير منتظمة، عندما يحين موعد الإزهار
+                تظهر أزهار صغيرة تحت الأوراق وهي تتميز بكأس أخضر ملتحم السبلات أما التويج فهو صغير جدا ولونه وردي مبيض. ثمار الخبيز كروية وتظل محاطة بالكأس إلى أن تجف وتسقط .
+            </p>
+            <h2 style="color: #1da73b;">النمو والإزهار : </h2>
+            <p>
+                ينمو في أواخر الشتاء ويزهر خلال الربيع.
+            </p>
+            <h2 style="color: #1da73b;">أماكن التواجد : </h2>
+            <p>
+                ينمو في معظم المناطق الشمالية منها والجنوبية، إلا أنه يكثر في المناطق المحمية مثل الحدائق والمزارع، كما يزدهر في مناطق المرتفعات والروابي المحيطة بالأهواد.
+            </p>
+            <h2 style="color: #1da73b;">الإنتشار الجغرافي : </h2>
+            <p>
+                ينتشر في منطقة حوض البحر الأبيض المتوسط.
+            </p>
+            <h2 style="color: #1da73b;">ملاحظات : </h2>
+            <p>
+              ⦿ .أوراق الخبيز يمكن استهلاكها غضة، وهي تستعمل في تحضير بعض السلائط 
+                <br>⦿ يمكن أن يعتبر من النباتات الضارة خاصة عندما ينمو بكثافة بين النباتات المزروعة
+            </p>
+
+            <br>
+            <br>
+            <br>
+
+            <h2 style="color: #fc5039;">رسم توضيحي للخبيز</h2>
+            <h2 style="color: #fc5039;">Malva parviflora L.</h2>
+               
+            <h3 style="color: #1da73b;">(الشكل 1)</h3><p>عنق الورقة طويل أسطواني ويشبه الساق.</p>
+            <h3 style="color: #1da73b;"><br>(الشكل 2)</h3><p>التويج قصير ويتكون من 05 بتلات وردية.</p>
+            <h3 style="color: #1da73b;"><br>(الشكل 3)</h3><p>تتكون الثمار من 05 كبسولات كلوية.</p>
+         
+        </p>
+    </div>
+    <div class="col mb-5 py-5">
+        <div class="row px-5">
+            <div class="col-lg-12 mb-5 d-flex align-items-center justify-content-center">
+                <form  enctype="multipart/form-data">
+                  <div class="card bg-dark text-light">
+                    <div class="card-body text-center">
+                      <label  class="card-img w-1 h-1">
+                        <img id="pwd_preview23" src="{{ url_for('static', filename='Malva_parviflora.jpg') }}" style="height:605px; width:512px">
+                      </label>
+                    </div>
+                  </div>
+                </from> 
+            </div>
+
+            <div class="col-lg-12 mt-5 d-flex align-items-center justify-content-center">
+                <form  enctype="multipart/form-data">
+                  <div class="card bg-dark text-light">
+                    <div class="card-body text-center">
+                      <label  class="card-img w-1 h-1">
+                        <img id="pwd_preview23" src="{{ url_for('static', filename='Malva.jpg') }}" style="height:704px; width:512px">
+                      </label>
+                    </div>
+                  </div>
+                </from> 
+            </div>
+
+        </div>
+    </div>
+    
+</div>
+
+</body>
+</html>
+{% endblock content %}
